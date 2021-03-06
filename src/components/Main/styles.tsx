@@ -3,6 +3,9 @@ import styled from 'styled-components'
 
 export const MainC = styled.div`
     padding: 40px 40px;
+    justify-content: center;
+    align-items: center;
+    display : flex;
     @media screen and (max-width: 768px){
         padding: 20px 20px;
     }
@@ -26,8 +29,8 @@ export const MainGrid = styled.div`
         grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (max-width: 768px){
-        grid-template: 1fr;
+    @media screen and (max-width: 480px){
+        grid-template-columns: 1fr;
     }
 `
 export const Loading = styled.div`
