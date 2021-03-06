@@ -51,7 +51,6 @@ export default function Home() {
     setLoader(false);
   }, 1000);
 
-
   const toggle = () => {
     setIsOpen(!isOpen)
   }
