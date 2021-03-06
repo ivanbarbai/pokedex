@@ -30,7 +30,7 @@ export const MainGrid = styled.div`
     }
 
     @media screen and (max-width: 480px){
-        grid-template-columns: 1fr;
+        grid-template-columns: 0.94fr;
     }
 `
 export const Loading = styled.div`
