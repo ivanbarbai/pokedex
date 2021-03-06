@@ -67,7 +67,7 @@ export default function Home() {
         <SideBar toggle={toggle} />
         <MainWrapper>
           <Navbar searchTerm={searchTerm} searchHandle={searchHandle} />
-          <Main pokemons={pokemons} />
+          <Main loader={loader} pokemons={pokemons} />
         </MainWrapper>
       </AppWrapper>
     </>
