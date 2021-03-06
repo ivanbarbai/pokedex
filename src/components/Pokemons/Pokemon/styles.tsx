@@ -4,7 +4,6 @@ import styled from 'styled-components'
 export const Card = styled.div`
     width:  100%;
     max-width: 22rem;
-    height: 26rem;
     border-radius: 16px;
     box-shadow: 1px 1px 4px 4px #566CD615;
     background: white;
@@ -32,11 +31,12 @@ export const CardHeader = styled.div`
 `
 export const CardContent = styled.div`
     width: 100%;
+    height: 14rem;
     display: flex; 
     align-items:center;
     justify-content: center;
     margin: 0;
-    padding: 20px 10px;
+    padding: 40px 0;
 `
 export const CardFooter = styled.div`
     width: 100%;
