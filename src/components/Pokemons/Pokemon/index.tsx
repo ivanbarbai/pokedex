@@ -14,16 +14,13 @@ const Pokemon = ({ pokemon }) => {
                     </CardHeader>
                     <CardContent>
                         <PokemonImage>
-                            <img src={pokemon.sprites.other.dream_world.front_default} width='100%' />
+                            <img src={pokemon.sprites.other.dream_world.front_default} width='100%' height='100%' />
                         </PokemonImage>
                     </CardContent>
                     <CardFooter>
                         <PokemonTypes>
                             <PokemonType>
-                                Grass
-                            </PokemonType>
-                            <PokemonType>
-                                Poison
+                                {pokemon.types[0].type.name}
                             </PokemonType>
                         </PokemonTypes>
                     </CardFooter>

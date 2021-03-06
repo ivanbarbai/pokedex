@@ -34,7 +34,7 @@ export default function Home() {
   const arr = [];
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/?limit=10')
+    fetch('https://pokeapi.co/api/v2/pokemon/')
       .then((response) => response.json())
       .then((data) => setData(
         data.results.map((item) => {

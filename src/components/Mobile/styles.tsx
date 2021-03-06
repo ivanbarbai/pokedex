@@ -2,13 +2,19 @@ import styled from 'styled-components'
 import { FaTimes } from 'react-icons/fa';
 
 export const MobileContainer = styled.div`
-    position: fixed;    
+    position: relative;    
     width: 60%;
     height: 100%;
     background: #566CD6;
     display:flex;
     flex-direction: column;
     align-items: center;
+
+    left: ${({ isOpen }) => (isOpen ? '100%' : '0')};
+    
+    @media and screen (min-width:240px){
+        display: none;
+    }
 `
 export const MobileHeader = styled.div`
     height:80px;
@@ -43,11 +49,14 @@ export const MobileWrapper = styled.div`
     background: rgba(0,0,0, 0.5);
     width: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     top: 0;
-    left: 0;
     transition: 0.3s ease-in-out;
     z-index: ${({ isOpen }) => (isOpen ? '999' : '1')};
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-`
+
+    @media and screen (min-width:240px){
+        display: none;
+    }
+    `
 
 export const MobileContent = styled.div`
     width: 100%;

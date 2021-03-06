@@ -6,12 +6,11 @@ export const SearchContainer = styled.div`
     justify-content: space-between;
     width: 100%;
     border-radius 30px;
-    border: 1px solid #566CD6;
+    border: 0.5 solid #566CD6;
     margin:0;
     padding:0;
     box-shadow: 1px 1px 4px 4px #566CD615;
     background: white;
-    z-index:999;
     @media and screen (max-width:780px;){
         width: 100%
     }
