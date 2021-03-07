@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Head from 'next/head'
+
 import Navbar from '../components/Navbar'
 import SideBar from '../components/Sidebar'
 import Main from '../components/Main'
@@ -12,6 +13,7 @@ import { AppWrapper, MainWrapper } from '../styles/styles'
 export default function Home() {
 
   const [isOpen, setIsOpen] = useState(false)
+  const [isFlexed, setIsFlexed] = useState(false)
 
   const [data, setData] = useState([]);
   const [pokemons, setPokemons] = useState([]);
@@ -58,9 +60,9 @@ export default function Home() {
       </Head>
       <AppWrapper>
         <MobileMenu isOpen={isOpen} toggle={toggle} />
-        <SideBar toggle={toggle} />
+        <SideBar toggle={toggle} isFlexed={true} />
         <MainWrapper>
-          <Navbar searchTerm={searchTerm} searchHandle={searchHandle} />
+          <Navbar isFlexed={isFlexed} searchTerm={searchTerm} searchHandle={searchHandle}/>
           <Main loader={loader}>
             <Pokemons pokemons={pokemons} />
           </Main>

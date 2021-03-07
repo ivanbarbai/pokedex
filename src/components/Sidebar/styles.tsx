@@ -17,6 +17,8 @@ export const SideBar = styled.div`
         width:100%;
         max-width: 100%;
         height: 80px;
+        display: ${({isFlexed}) => (isFlexed ? 'flex' : 'none')};
+        visibility: ${({isFlexed}) => (isFlexed ? 'visible' : 'hidden')};
     }
 `
 export const SideBarContainer = styled.section`

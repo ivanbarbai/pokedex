@@ -5,20 +5,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 //Styled components
-import { Nav, NavbarContanier, BackButtonWrapper, BackButton, SearchWrapper } from './styles'
+import { Nav, NavbarContanier, SearchWrapper } from './styles'
 
-const Navbar = ({ searchTerm, searchHandle }) => {
+const Navbar = ({ searchTerm, searchHandle, children, isFlexed}) => {
     return (
         <>
             <Nav>
-                <NavbarContanier>
-                    <Link href='/' >
-                        <BackButtonWrapper>
-                            <BackButton>
-                                <Image src='/assets/Icons/Back.svg' width={24} height={24} />
-                            </BackButton>
-                        </BackButtonWrapper>
-                    </Link>
+                <NavbarContanier isFlexed={isFlexed}>
+                    {children}
                     <SearchWrapper>
                         <Search searchTerm={searchTerm} searchHandle={searchHandle} />
                     </SearchWrapper>

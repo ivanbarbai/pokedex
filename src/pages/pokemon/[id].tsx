@@ -5,10 +5,11 @@ import Navbar from '../../components/Navbar'
 import SideBar from '../../components/Sidebar'
 import Main from '../../components/Main'
 import PokemonDetails from '../../components/Pokemons/PokemonDetails'
+import Back from '../../components/BackButton'
 
 import { AppWrapper, MainWrapper } from '../../styles/styles'
 
-const Details = ({ pokemon, loader, searchTerm, searchHandle, toggle }) => {
+const Details = ({ pokemon, loader, searchTerm, searchHandle, toggle, isFlexed }) => {
     console.log(pokemon)
     return (
         <>
@@ -17,9 +18,11 @@ const Details = ({ pokemon, loader, searchTerm, searchHandle, toggle }) => {
                 <link rel="icon" href="/favicon.svg" />
             </Head>
             <AppWrapper>
-                <SideBar toggle={toggle} />
+                <SideBar toggle={toggle} isFlexed={false} />
                 <MainWrapper>
-                    <Navbar searchTerm={searchTerm} searchHandle={searchHandle} />
+                    <Navbar isFlexed={true} searchTerm={searchTerm} searchHandle={searchHandle}>
+                        <Back />
+                    </Navbar>
                     <Main loader={loader}>
                         <Pokemon pokemon={pokemon} />
                         <PokemonDetails pokemon={pokemon} />

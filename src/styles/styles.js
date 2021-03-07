@@ -10,7 +10,7 @@ export const AppWrapper = styled.div`
 `
 
 export const MainWrapper = styled.div`
-    background: linear-gradient(#F2F4FF #FBFCFF)
+    background: linear-gradient(#F2F4FF #FBFCFF);
     display: flex;
     flex-direction: column;
     width: 100%;

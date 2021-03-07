@@ -6,7 +6,8 @@ export const Nav = styled.nav`
     display: flex;
     top: 0;
     width: 100%;
-
+    align-items: center;
+    justify-content: flex-end;
     @media screen and (max-width:768px){
         position: flex;
         width: 100%;
@@ -15,37 +16,20 @@ export const Nav = styled.nav`
 `
 export const NavbarContanier = styled.div`
    display: flex;
-   justify-content: space-between;
+   justify-content: ${({ isFlexed }) => (isFlexed ? 'space-between' : 'flex-end')};
    align-items: center;
    width: 100%;
    padding: 0 40px;
-
    @media screen and (max-width:768px){
        padding 0 20px;
    }
 `
 
-export const BackButtonWrapper = styled.div`
-    background: #566CD6;
-    display: flex;
-    border-radius: 20px;
-    padding: 10px 20px;
-    max-width: 20vw;
-    margin-right: 10px;
-    justify-content:center;
-    align-items:center;
-    cursor: pointer;
-`
-export const BackButton = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
 export const SearchWrapper = styled.div`
    width: 100%;
    max-width: 30vw;
 
    @media screen and (max-width:780px){
-    max-width: 60vw;
+    max-width: 100%;
    }
 `

@@ -4,10 +4,10 @@ import { SideBar, SideBarContainer, SideBarMobile, TextButton, SidebarLogoWrappe
 import Image from 'next/image';
 
 
-const Sidebar = ({ toggle }) => {
+const Sidebar = ({ toggle, isFlexed }) => {
     return (
         <>
-            <SideBar>
+            <SideBar isFlexed={isFlexed}>
                 <SideBarContainer>
                     <SideBarMobile onClick={toggle}>
                         <Image src='/assets/Icons/Menu.svg' width={24} height={24} />
