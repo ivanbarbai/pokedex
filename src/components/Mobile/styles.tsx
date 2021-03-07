@@ -3,21 +3,19 @@ import { FaTimes } from 'react-icons/fa';
 
 export const MobileContainer = styled.div`
     position: relative;    
-    width: 60%;
+    width: 80%;
     height: 100%;
     background: #566CD6;
     display:flex;
     flex-direction: column;
     align-items: center;
-
+    top:0;
     left: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     
-    @media and screen (min-width:240px){
-        display: none;
-    }
+
 `
 export const MobileHeader = styled.div`
-    height:80px;
+    height:90px;
     width:100%;
     display:flex;
     justify-content:flex-start;
@@ -39,9 +37,10 @@ export const ContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding:  0;
+    width: 100%;
+    padding: 20px 0;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-between;
     `
 export const MobileWrapper = styled.div`
     position: fixed;
@@ -72,11 +71,12 @@ export const MobileFooter = styled.div`
 `
 
 export const MobileAvatar = styled.div`
-    max-width: 12rem;
+    max-width: 10rem;
+
 `
 export const MobileUser = styled.h2`
-color: white;
-margin-bottom: 0.2rem;
+    color: white;
+    margin-bottom: 0.2rem;
 `
 export const MobileLevel = styled.h3`
     color: rgba(255, 255, 255, 0.5) ;

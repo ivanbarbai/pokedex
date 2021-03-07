@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 import { MainC, MainContainer, MainGrid, Loading } from './styles'
 
-import Pokemons from '../Pokemons'
 
-export default function Main({pokemons, loader}) {
+export default function Main({ loader, children }) {
     return (
         <>
             <MainC>
@@ -13,7 +12,7 @@ export default function Main({pokemons, loader}) {
                         <Loading>Loading</Loading>
                     ) : (
                             <MainGrid>
-                                <Pokemons pokemons={pokemons} />
+                                {children}
                             </MainGrid>
                         )}
                 </MainContainer>

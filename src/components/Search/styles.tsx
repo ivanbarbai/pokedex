@@ -26,6 +26,12 @@ export const SearchInput = styled.input`
     width:100%;
     border: none;
     outline: none;
+
+    -moz-outline: none;
+    -webkit-outline: none;
+
+    -moz-border: none;
+    -webkit-border: none;
 `
 export const SearchIconWrapper = styled.div`
     background: #566CD6;

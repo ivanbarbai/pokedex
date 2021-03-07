@@ -34,6 +34,7 @@ export const BackButtonWrapper = styled.div`
     margin-right: 10px;
     justify-content:center;
     align-items:center;
+    cursor: pointer;
 `
 export const BackButton = styled.div`
     display: flex;

@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import SideBar from '../components/Sidebar'
 import Main from '../components/Main'
 import MobileMenu from '../components/Mobile'
+import Pokemons from '../components/Pokemons'
 
 import { AppWrapper, MainWrapper } from '../styles/styles'
 
@@ -19,17 +20,11 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [search, setSearch] = useState([])
 
-  const searchHandle = (event) => {
-    setSearchTerm(event.target.value)
-  }
+  const searchHandle = (e) => {
+    e.preventDefault();
 
-  useEffect(() => {
-    const results = search.filter((person) => person.name.toLowerCase().includes(searchTerm))
-    setSearch(results)
-    if (searchTerm === '') {
-      setSearch(pokemons);
-    }
-  }, [searchTerm])
+    setSearchTerm(e.target.value.toLowerCase())
+  }
 
   const arr = [];
 
@@ -66,7 +61,9 @@ export default function Home() {
         <SideBar toggle={toggle} />
         <MainWrapper>
           <Navbar searchTerm={searchTerm} searchHandle={searchHandle} />
-          <Main loader={loader} pokemons={pokemons} />
+          <Main loader={loader}>
+            <Pokemons pokemons={pokemons} />
+          </Main>
         </MainWrapper>
       </AppWrapper>
     </>

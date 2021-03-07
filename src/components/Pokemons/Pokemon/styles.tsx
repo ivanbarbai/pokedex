@@ -9,7 +9,7 @@ export const Card = styled.div`
     background: white;
     &:hover{
         transform: scale(1.02);
-        transition: all 0.2s ease-in-out;
+        transition: all 0.3s ease-in-out;
         cursor:pointer;
     }
 `
