@@ -6,7 +6,7 @@ import SideBar from '../../components/Sidebar'
 import Main from '../../components/Main'
 import PokemonDetails from '../../components/Pokemons/PokemonDetails'
 
-import { AppWrapper, MainWrapper } from './styles'
+import { AppWrapper, MainWrapper } from '../../styles/styles'
 
 const Details = ({ pokemon, loader, searchTerm, searchHandle, toggle }) => {
     console.log(pokemon)
