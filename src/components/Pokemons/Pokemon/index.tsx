@@ -15,7 +15,7 @@ const Pokemon = ({ pokemon }) => {
                         </CardHeader>
                         <CardContent>
                             <PokemonImage>
-                                <img src={pokemon.sprites.other.dream_world.front_default} width='100%' height='100%' />
+                                <img src={`https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`} height='100%' />
                             </PokemonImage>
                         </CardContent>
                         <CardFooter>
